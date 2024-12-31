@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>큰사 시계</title>
+  <link rel="stylesheet" href="C:\Users\sunny\Desktop\직박구리\코딩\시계 사이트\styles.css">
+</head>
+<body>
+
+  <!-- 슬라이드 컨테이너 -->
+  <div class="slider-container" id="slider">
+    
+    <!-- 첫번째 슬라이드: 실시간 시계 -->
+    <div class="slide">
+      <div class="centered-content">
+        <div id="clock">00:00:00</div>
+      </div>
+    </div>
+    
+    <!-- 두번째 슬라이드: 타이머 -->
+    <div class="slide">
+      <div class="centered-content">
+        <div id="timer">00:00</div>
+        <div class="controls">
+          <input type="number" id="timerMinutes" placeholder="분" style="width: 50px;">
+          <button onclick="startTimer()">타이머 시작</button>
+          <button onclick="stopTimer()">타이머 멈춤</button>
+          <button onclick="resetTimer()">타이머 리셋</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 세번째 슬라이드: 스톱워치 -->
+    <div class="slide">
+      <div class="centered-content">
+        <div id="stopwatch">00:00:00</div>
+        <div class="controls">
+          <button onclick="startStopwatch()">스톱워치 시작</button>
+          <button onclick="stopStopwatch()">스톱워치 멈춤</button>
+          <button onclick="resetStopwatch()">스톱워치 리셋</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 이전/다음 버튼 -->
+  <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+  <button class="next" onclick="moveSlide(1)">&#10095;</button>
+
+  <script src="C:\Users\sunny\Desktop\직박구리\코딩\시계 사이트\script.js"></script>
+</body>
+</html>
